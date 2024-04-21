@@ -5,3 +5,5 @@ API RESTful:
 * Java 17
 * HATEOAS
 * Seguindo o Modelo de Maturidade de Richardson
+* PgAdmin
+* Maven
