@@ -36,6 +36,8 @@ public class ProductController {
             for (ProductModel product : productList){
                 UUID id = product.getIdProduct();
                 product.add(linkTo(methodOn(ProductController.class).getOneProduct(id)).withSelfRel());
+                product.add(linkTo(methodOn(ProductController.class).updateProduct(id,null)).withRel("update"));
+                product.add(linkTo(methodOn(ProductController.class).deleteProduct(id)).withRel("delete"));
             }
         }
         return ResponseEntity.status(HttpStatus.OK).body(productList);
@@ -47,7 +49,7 @@ public class ProductController {
         if(product.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found.");
         }
-        product.get().add(linkTo(methodOn(ProductController.class).getAllProducts()).withRel("Products List"));
+        product.get().add(linkTo(methodOn(ProductController.class).getAllProducts()).withRel("List"));
         return ResponseEntity.status(HttpStatus.OK).body(product.get());
     }
 
