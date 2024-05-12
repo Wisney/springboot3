@@ -1,9 +1,9 @@
 API RESTful:
 
 * Spring Boot 3
-* Spring Framework 6g
+* Spring Framework 6
 * Java 17
 * HATEOAS
-* Seguindo o Modelo de Maturidade de Richardson
+* Richardson Maturity Model
 * PgAdmin
 * Maven
